@@ -36,27 +36,26 @@ db.users.insertMany([
     ])
 /*.............................................................................................................................................*/
    /*codekata*/
-   use students;
-db.codekata.insertMany([
+   db.codekata.insertMany([
     {
         userid:1,
-        problems:70
+        problems:80
     },
      {
         userid:2,
-        problems:10
+        problems:110
     },
      {
         userid:3,
-        problems:50
+        problems:95
     },
      {
         userid:4,
-        problems250
+        problems:55
     },
      {
         userid:5,
-        problems:80
+        problems:75
     }
     ])  
     
@@ -202,7 +201,7 @@ db.mentors.insertMany([
  /*.................................................................................................................................................*/   
 /*company drives*/
 use students;
-db.comapnydrives.insertMany([
+db.companydrives.insertMany([
     {
         userid:1,
         drive_date:new Date("15-oct-2020"),
@@ -211,7 +210,7 @@ db.comapnydrives.insertMany([
      {
         userid:1,
         drive_date:new Date("21-oct-2020"),
-        company:"Infosys
+        company:"Infosys"
     },
      {
         userid:2,
