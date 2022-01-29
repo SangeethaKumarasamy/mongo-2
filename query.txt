@@ -24,13 +24,13 @@ db.topics.aggregate([
 
 /*Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020*/
 use students;
-db.comapnydrives.find({$or:[{drive_date:{$gte:new Date("15-oct-2020")}},
-{drive_date:{$lte:new Date("31-0ct-2020")}}]})
+db.companydrives.find({$or:[{drive_date:{$gte:new Date("15-oct-2020")}},
+{drive_date:{$lte:new Date("31-0ct-2020")}}]}).pretty()
 
 /*................................................................................................................................................................................*/
 /*Find all the company drives and students who are appeared for the placement.*/
 use students;
-db.comapnydrives.aggregate([
+db.companydrives.aggregate([
     {
         $lookup: {
               from:"users",
@@ -49,7 +49,7 @@ db.comapnydrives.aggregate([
             "userinfo.userid":1
         }
     }
-    ])
+    ]).pretty()
  /*.......................................................................................................................................................................*/
    /*Find the number of problems solved by the user in codekata*/
 use students;
@@ -67,7 +67,7 @@ db.codekata.aggregate([
             _id:0,userid:1,problems:1,"userinfo.name":1
         }
     }
-    ])
+    ]).pretty()
    
 /*..............................................................................................................................................................*/
 
